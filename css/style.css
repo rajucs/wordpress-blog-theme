@@ -450,7 +450,11 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
-
+/* post lists  */
+.post-lists img{
+	width: 100%;
+}
+/* post lists  */
 
 /* #Media
 ================================================== */

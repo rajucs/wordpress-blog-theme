@@ -63,13 +63,16 @@ get_header();
                     // Post Content here
                     //
             ?>
-                    <div class="col-12 col-sm-8 col-md-6 col-lg-6">
+                    <div class="col-12 col-sm-8 col-md-4 col-lg-4">
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    <?php echo get_the_post_thumbnail(get_the_id(), 'thumbnail'); ?> </div>
-                                <div class="col-md-8">
+                                <div class="col-12 post-lists">
+
                                     <div class="card-body">
+                                        <div class="" style="height: 200px;">
+                                            <?php echo get_the_post_thumbnail(get_the_id(), 'thumbnail'); ?>
+
+                                        </div>
                                         <h5 class="card-title"><a href="<?php echo get_permalink() ?>"><?php echo get_the_title(); ?></a></h5>
                                         <p class="card-text">
                                             <?php echo get_the_excerpt(); ?>
@@ -92,7 +95,13 @@ get_header();
             <?php
                 } // end while
             } // end if
+
             ?>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <?php the_posts_pagination(array('mid_size' => 2)); ?>
+            </div>
         </div>
     </div>
 </section>
